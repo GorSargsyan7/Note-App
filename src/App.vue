@@ -1,34 +1,61 @@
 <template>
-<RouterView/>
-<div v-for="pix in arr">
-<PixCounter  v-if="pix.age <= 10" :name="pix.name" :age="pix.age" :count="pix.count"/>
-</div>
+  <main class="main">
+    <h1>Note App</h1>
+
+    <div class="notes">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </div>
+    <AddButton/>
+  </main>
+
 </template>
 
 <script setup>
-import { RouterView } from 'vue-router'
-import PixCounter from './components/PixCounter.vue'
-import { ref } from 'vue';
-
-let arr = ref([
-  {
-    name:'Luna',
-    age: 5,
-    count: 1
-  },
-    {
-    name:'Ronaldo',
-    age: 40,
-    count: 1
-  },
-    {
-    name:'Aaaa',
-    age: 59,
-    count: 2
-  },
-])
+import Card from './components/Card.vue'
+import AddButton from'./components/AddButton.vue';
 </script>
 
 <style>
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  color: #000000;
 
+}
+
+main.main {
+  background: linear-gradient(128deg, rgba(135, 246, 180, 0.84) 12.75%, rgba(50, 180, 187, 0.67) 83.4%);
+  ;
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+
+}
+
+h1 {
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 24px;
+
+}
+.notes{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 </style>
