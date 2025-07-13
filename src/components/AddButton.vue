@@ -17,7 +17,7 @@
     height: 68px;
     border: 2px solid white;
     border-radius: 34px;
-    font-size: 50px;
+    font-size: 35px;
     background: #4CCB90;
     color: #fff;
     cursor: pointer;
